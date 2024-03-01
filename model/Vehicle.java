@@ -1,19 +1,16 @@
 package ParkingLot.model;
 
-import ParkingLot.model.enums.VehicleClass;
+
 import ParkingLot.model.enums.VehicleType;
 
 public class Vehicle extends BaseModel{
 
     private VehicleType vehicleType;
-    private VehicleClass vehicleClass;
-
     private String vehicleNumber;
     private String vehicleColor;
 
-    public Vehicle(VehicleType vehicleType, VehicleClass vehicleClass, String vehicleNumber, String vehicleColor) {
+    public Vehicle(VehicleType vehicleType, String vehicleNumber, String vehicleColor) {
         this.vehicleType = vehicleType;
-        this.vehicleClass = vehicleClass;
         this.vehicleNumber = vehicleNumber;
         this.vehicleColor = vehicleColor;
     }
@@ -29,14 +26,6 @@ public class Vehicle extends BaseModel{
 
     public void setVehicleType(VehicleType vehicleType) {
         this.vehicleType = vehicleType;
-    }
-
-    public VehicleClass getVehicleClass() {
-        return vehicleClass;
-    }
-
-    public void setVehicleClass(VehicleClass vehicleClass) {
-        this.vehicleClass = vehicleClass;
     }
 
     public String getVehicleNumber() {
